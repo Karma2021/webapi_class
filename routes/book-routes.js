@@ -7,7 +7,6 @@ const bookController = require('../controllers/book-controller')
 const reviewController = require('../controllers/review-controller')
 
 
-
 route.route('/')
     .get(bookController.getAllBooks)
     .post(bookController.createBooks)
@@ -24,7 +23,7 @@ route.route('/:book_id')
     })
     .put(bookController.updateABookById)
     .delete(bookController.deleteABookById)
-
+    
 route.route('/:book_id/reviews')
     .get(reviewController.getAllReviews)
     .post(reviewController.createReviews)

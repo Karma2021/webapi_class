@@ -18,6 +18,9 @@ router.post('/register', (req, res, next) => {
             })
         }).catch(next)
 })
+router.get('/register', (req, res, next)=>{
+    res.send(req.body)
+})
 
 router.post('/login', (req, res, next) => {
     User.findOne({ username: req.body.username })
